@@ -16,6 +16,7 @@
 :global(.input) {
   height: 60px;
   border-radius: 6px;
+  font-size: 26px;
 }
 :global(.btn) {
   font-size: 30px;
