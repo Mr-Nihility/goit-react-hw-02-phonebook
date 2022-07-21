@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { nanoid } from 'nanoid';
 import s from './Form.module.css';
+import PropTypes from 'prop-types';
 
 const INIT_FORM = {
   name: '',
@@ -8,6 +9,9 @@ const INIT_FORM = {
 };
 
 class Form extends Component {
+  static propTypes = {
+    onSubmit: PropTypes.func.isRequired,
+  };
   state = {
     ...INIT_FORM,
   };

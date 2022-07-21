@@ -1,4 +1,5 @@
 import s from './Filter.module.css';
+import PropTypes from 'prop-types';
 const Filter = ({ filter, handlerFilter }) => {
   return (
     <label className={s.label}>
@@ -12,6 +13,11 @@ const Filter = ({ filter, handlerFilter }) => {
       />
     </label>
   );
+};
+
+Filter.propTypes = {
+  filter: PropTypes.string.isRequired,
+  handlerFilter: PropTypes.func.isRequired,
 };
 
 export { Filter };
