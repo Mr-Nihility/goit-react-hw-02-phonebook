@@ -18,7 +18,14 @@ class App extends Component {
   };
 
   handlerSubmit = data => {
-    console.log(data);
+    const inContacts = this.state.contacts.some(
+      contact => data.name === contact.name
+    );
+    if (inContacts) {
+      alert(`${data.name} is already in contacts`);
+      return;
+    }
+    // console.log(inContacts);
     this.setState(prev => {
       return { contacts: [...prev.contacts, data] };
     });

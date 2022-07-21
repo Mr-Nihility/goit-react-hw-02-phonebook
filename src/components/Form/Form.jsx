@@ -23,7 +23,6 @@ class Form extends Component {
   handlerSubmit = e => {
     e.preventDefault();
     const id = nanoid();
-
     this.props.onSubmit({ ...this.state, id });
     this.setState({ ...INIT_FORM });
   };
