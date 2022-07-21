@@ -19,7 +19,8 @@ class App extends Component {
 
   handlerSubmit = data => {
     const inContacts = this.state.contacts.some(
-      contact => data.name === contact.name
+      contact =>
+        data.name.toLocaleLowerCase() === contact.name.toLocaleLowerCase()
     );
     if (inContacts) {
       alert(`${data.name} is already in contacts`);
