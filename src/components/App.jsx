@@ -26,7 +26,7 @@ class App extends Component {
       alert(`${data.name} is already in contacts`);
       return;
     }
-    // console.log(inContacts);
+
     this.setState(prev => {
       return { contacts: [...prev.contacts, data] };
     });

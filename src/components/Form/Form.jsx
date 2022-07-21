@@ -23,6 +23,12 @@ class Form extends Component {
   handlerSubmit = e => {
     e.preventDefault();
     const id = nanoid();
+    const { name, number } = this.state;
+    if (!name || !number) {
+      alert('Please, fill all fields');
+      return;
+    }
+
     this.props.onSubmit({ ...this.state, id });
     this.setState({ ...INIT_FORM });
   };
